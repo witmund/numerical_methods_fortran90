@@ -16,16 +16,16 @@ IF (func(xl) == 0.0_dp) THEN
     WRITE(*,*) "root =", xl
 ELSE IF (func(xu) == 0.0_dp) THEN
     WRITE(*,*) "root =", xu
-ELSE IF (func(xl)*func(xu) > 0.0D0) THEN
+ELSE IF (func(xl)*func(xu) > 0.0_dp) THEN
     WRITE(*,*) "Error!"
     WRITE(*,*) "Change the value of the initial guesses"
     WRITE(*,*) "Reinitializing..."
     GOTO 5
-ELSE IF (func(xl)*func(xu) < 0.0D0) THEN
+ELSE IF (func(xl)*func(xu) < 0.0_dp) THEN
     DO
         xr = ((xl*func(xu))-(xu*func(xl)))/(func(xu) - func(xl))
         rootold = xr
-        IF (func(xl)*func(xr) < 0.0D0) THEN
+        IF (func(xl)*func(xr) < 0.0_dp) THEN
             xu = xr
         ELSE
             xl = xr

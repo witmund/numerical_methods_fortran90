@@ -26,11 +26,11 @@ ELSE IF (func(xl)*func(xu) > 0.0_dp) THEN
     WRITE(*,*) "The root does not lie between", xl, " and ", xu
     WRITE(*,*) "Reinitializing..."
     GOTO 5
-ELSE IF (func(xl)*func(xu) < 0.0D0) THEN
+ELSE IF (func(xl)*func(xu) < 0.0_dp) THEN
     DO
         xr = (xl + xu)/2.0_dp
         rootold = xr
-        IF (func(xl)*func(xr) < 0.0D0) THEN
+        IF (func(xl)*func(xr) < 0.0_dp) THEN
             xu = xr
         ELSE
             xl = xr

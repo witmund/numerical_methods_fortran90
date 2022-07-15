@@ -1,5 +1,5 @@
 ! Root finding program using bisection method (Bolzano's method)
-! Double precession is used 
+! Double precession is being used 
 
 PROGRAM bisection
 

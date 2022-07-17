@@ -1,5 +1,5 @@
 ! Root finding program using Newton-Rhapson method
-! Double precession is being used
+! Double precision is being used
 
 PROGRAM newrhap
 

@@ -4,7 +4,7 @@
 PROGRAM newrhap
 
 IMPLICIT NONE
-INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precession parameter
+INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precision parameter
 REAL(dp), PARAMETER :: es = 1.0D-5          ! stopping criterion
 REAL(dp) :: xi, rootold, ea, root
 INTEGER :: iter = 0

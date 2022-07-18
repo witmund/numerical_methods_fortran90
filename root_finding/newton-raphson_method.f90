@@ -18,9 +18,7 @@ DO
 
 	ea = DABS((rootold - root)/root)
 
-	IF (ea < es) THEN
-		EXIT
-	END IF
+	IF (ea < es) EXIT
 	xi = root
 	iter = iter + 1
 END DO

@@ -4,7 +4,7 @@
 PROGRAM secant
 
 IMPLICIT NONE
-INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precession parameter
+INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precision parameter
 REAL(dp), PARAMETER :: es = 1.0D-5          ! stopping criterion
 REAL(dp) :: xi1, xi2, rootold1, rootold2, rootold, ea, root
 INTEGER :: iter = 0
@@ -21,9 +21,7 @@ DO
 	ea = DABS((rootold - rootold1)/rootold1)
 	root = rootold
 
-	IF (ea < es) THEN
-		EXIT
-	END IF
+	IF (ea < es) EXIT
 	xi2 = rootold
 	xi1 = rootold1
 	iter = iter + 1		! number of iteration

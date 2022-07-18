@@ -121,7 +121,7 @@ DO j = 2, n
         a(j+1,:) = a0(j,:)
         b(j+1,:) = b0(j,:)
         L(j+1,:) = L0(j,:)
-        GOTO 77       ! Periksa lagi bila terjadi pertukaran
+        GOTO 77
       END IF
 
 ! Completing the U matrix

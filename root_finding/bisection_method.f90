@@ -4,7 +4,7 @@
 PROGRAM bisection
 
 IMPLICIT NONE
-INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precession parameter
+INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precision parameter
 REAL(dp), PARAMETER :: es = 1.0D-5          ! stopping criterion
 REAL(dp) :: xl, xu, xr, rootold, ea, root
 INTEGER :: iter = 0
@@ -40,9 +40,7 @@ ELSE IF (func(xl)*func(xu) < 0.0_dp) THEN
         root = xr
         ea = DABS((rootold - root)/root)
 
-        IF(ea < es) THEN
-            EXIT
-        END IF
+        IF(ea < es) EXIT
         rootold = root
         iter = iter + 1     ! number of iteration
     END DO

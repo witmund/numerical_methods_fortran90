@@ -1,7 +1,7 @@
 ! Root finding program using Newton-Raphson method
 ! Double precision is being used
 
-PROGRAM newrhap
+PROGRAM newraph
 
 IMPLICIT NONE
 INTEGER, PARAMETER :: dp = KIND(1.0D0)      ! double precision parameter
@@ -53,4 +53,4 @@ y = (3.0_dp*x**2.0_dp) + 5.0_dp       ! first derivative
 RETURN
 END FUNCTION funcder
 
-END PROGRAM newrhap
+END PROGRAM newraph

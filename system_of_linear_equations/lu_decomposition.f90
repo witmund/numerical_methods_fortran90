@@ -147,12 +147,6 @@ DO i = 1, n
   WRITE(*,*) (U(i,j), j = 1,n)
 END DO
 
-! Mathematical structure
-! A.X = B
-! L.U.X = B
-! U.X = Y --> L.Y = B --> Y = B/L
-! X = Y/U
-
 ! Forward substitution
 y(1,:) = b(1,:)/L(1,1)
 DO q = 1, m

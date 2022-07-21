@@ -1,4 +1,4 @@
-! System of linear equations solver powered by näive Gauss elimination
+! System of linear equations solver powered by näive Gaussian elimination
 ! Double precision is being used
 
 ! There's no pivoting in this näive method so mind your matrix
@@ -96,6 +96,8 @@ DO i = n, 1, -1
   x(i)=(b(i)-s(i))/a(i,i)
 END DO
 
+DEALLOCATE(a,b,s)
+
 ! Solution of the SLE
 WRITE(*,*) 'Solutions'
 DO i = 1, n
@@ -110,7 +112,7 @@ END DO
 !END DO
 !CLOSE(20)
 
-DEALLOCATE(a, b, x, s)
+DEALLOCATE(x)
 
 STOP
 
